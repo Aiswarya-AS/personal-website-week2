@@ -113,7 +113,7 @@ function validateMessage(){
 
 
 function validateForm(){
-    if(!validateName() && !validatePhone() && !validateEmail() && !validateMessage() ){
+    if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage() ){
         submitError.style.direction = 'block';
         submitError.innerHTML = 'Please Fix the errors to submit'
         setTimeout(function(){submitError.style.display = 'none ';} , 3000)
